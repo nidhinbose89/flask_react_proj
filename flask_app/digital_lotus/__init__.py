@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import os
 
 from flask import Flask
@@ -11,7 +13,7 @@ from flask_restful import Api
 # config
 app = Flask(__name__)
 cors = CORS(app)
-app.config.from_object(os.environ['APP_SETTINGS'])
+app.config.from_object(os.environ.get('APP_SETTINGS'))
 
 # extensions
 bcrypt = Bcrypt(app)

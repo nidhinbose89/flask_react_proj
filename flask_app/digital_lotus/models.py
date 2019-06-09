@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 """Model Objects."""
 import datetime
 
@@ -42,7 +44,7 @@ class User(db.Model):
 
     def get_id(self):
         """Return the email address to satisfy Flask-Login's requirements."""
-        return unicode(self.id)
+        return str(self.id)
 
     @property
     def is_admin(self):
