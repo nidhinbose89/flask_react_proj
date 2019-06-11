@@ -43,7 +43,7 @@ class User(db.Model):
         return False
 
     def get_id(self):
-        """Return the email address to satisfy Flask-Login's requirements."""
+        """Return the id to satisfy Flask-Login's requirements."""
         return str(self.id)
 
     @property

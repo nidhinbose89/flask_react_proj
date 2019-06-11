@@ -28,7 +28,7 @@ from digital_lotus.views import (ResourceViews, LoginViews, LogoutViews, Registe
 
 api.add_resource(ResourceViews,
                  '/user',
-                 '/user/<int:user_id>'
+                 '/user/<str:graph_name>'
                  )
 api.add_resource(LoginViews,
                  '/login'

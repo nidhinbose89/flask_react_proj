@@ -8,6 +8,8 @@ from flask_login import (login_user, current_user,
 
 from digital_lotus import app, db, login_manager
 from digital_lotus.models import User
+from digital_lotus.notebook import data_analysis
+
 EXCLUDE_AUTH_VIEWS = ['login', 'logout']
 
 
@@ -20,7 +22,11 @@ def user_loader(user_id):
 
 
 class ResourceViews(BaseResource):
-    pass
+    """Resource views."""
+
+    def get(self, graph_name):
+        """Get the graph data and type as per name."""
+        pass
 
 
 class LoginViews(BaseResource):
@@ -91,10 +97,6 @@ class LogoutViews(BaseResource):
 
     def post(self):
         """Logout user."""
-        if not current_user.is_authenticated:
-            return {
-                "message": "No user logged-in.",
-            }, 403
         logout_user()
         return {
             "message": "User logged out successfully.",

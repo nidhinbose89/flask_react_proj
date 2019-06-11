@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label="instlevel8-sum <= 0.1\ngini = 0.53\nsamples = 1876\nvalue = [226, 450, 353, 1944]\nclass = non-vulnerable", fillcolor="#d739e597"] ;
+1 [label="instlevel2-sum <= 0.1\ngini = 0.63\nsamples = 1297\nvalue = [214, 399, 320, 1123]\nclass = non-vulnerable", fillcolor="#d739e56f"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="meaneduc <= 0.2\ngini = 0.53\nsamples = 698\nvalue = [83, 147, 150, 731]\nclass = non-vulnerable", fillcolor="#d739e59a"] ;
+1 -> 2 ;
+3 [label="gini = 0.65\nsamples = 287\nvalue = [44, 84, 98, 235]\nclass = non-vulnerable", fillcolor="#d739e560"] ;
+2 -> 3 ;
+4 [label="gini = 0.4\nsamples = 411\nvalue = [39, 63, 52, 496]\nclass = non-vulnerable", fillcolor="#d739e5bc"] ;
+2 -> 4 ;
+5 [label="escolari-std <= 0.34\ngini = 0.71\nsamples = 599\nvalue = [131, 252, 170, 392]\nclass = non-vulnerable", fillcolor="#d739e534"] ;
+1 -> 5 ;
+6 [label="gini = 0.72\nsamples = 548\nvalue = [127, 235, 166, 338]\nclass = non-vulnerable", fillcolor="#d739e52a"] ;
+5 -> 6 ;
+7 [label="gini = 0.48\nsamples = 51\nvalue = [4, 17, 4, 54]\nclass = non-vulnerable", fillcolor="#d739e598"] ;
+5 -> 7 ;
+8 [label="rooms <= 0.35\ngini = 0.19\nsamples = 579\nvalue = [12, 51, 33, 821]\nclass = non-vulnerable", fillcolor="#d739e5e3"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="inst/age-max <= 0.92\ngini = 0.32\nsamples = 155\nvalue = [8, 25, 14, 212]\nclass = non-vulnerable", fillcolor="#d739e5cc"] ;
+8 -> 9 ;
+10 [label="gini = 0.29\nsamples = 152\nvalue = [8, 20, 14, 211]\nclass = non-vulnerable", fillcolor="#d739e5d1"] ;
+9 -> 10 ;
+11 [label="gini = 0.28\nsamples = 3\nvalue = [0, 5, 0, 1]\nclass = moderate", fillcolor="#47e539cc"] ;
+9 -> 11 ;
+12 [label="hogar_nin <= 0.28\ngini = 0.14\nsamples = 424\nvalue = [4, 26, 19, 609]\nclass = non-vulnerable", fillcolor="#d739e5eb"] ;
+8 -> 12 ;
+13 [label="gini = 0.11\nsamples = 397\nvalue = [4, 18, 13, 582]\nclass = non-vulnerable", fillcolor="#d739e5f0"] ;
+12 -> 13 ;
+14 [label="gini = 0.51\nsamples = 27\nvalue = [0, 8, 6, 27]\nclass = non-vulnerable", fillcolor="#d739e593"] ;
+12 -> 14 ;
+}
